@@ -17,7 +17,7 @@ login_manager.login_view = 'login'
 class UserForm(FlaskForm):
     username = StringField("Ім'я користувача")
     password = PasswordField("Пароль")
-    submit = SubmitField("Увійти")
+    submit = SubmitField("Зареєструватися")
 
 
 class LoginForm(FlaskForm):
