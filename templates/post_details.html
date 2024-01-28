@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block page_name %}Інформація поста{% endblock %}
+
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
+    <h2>Коментарі</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>{{ comment.text }}</li>
+        {% endfor %}
+    </ul>
+    {% if current_user.is_authenticated %}
+        <form method="post">
+            {{ form.hidden_tag() }}
+            {{ form.text.label }}
+            {{ form.text(size=20) }}<br>
+            <div class="submit_btn_div">{{ form.submit() }}</div>
+        </form>
+    {% else %}
+    <p>Увійдіть для додавання постів</p>
+    {% endif %}
+{% endblock %}

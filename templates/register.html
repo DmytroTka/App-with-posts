@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Реєстрація{% endblock %}
+
+{% block page_name %}Реєстрація{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        {{ form.username.label }}<br>
+        {{ form.username(size=20) }}<br>
+        {{ form.password.label }}<br>
+        {{ form.password(size=20) }}<br>
+        <div class="submit_btn_div">{{ form.submit() }}</div>
+    </form>
+<br>
+<a href="{{ url_for('index') }}">Головна</a>
+{% endblock %}

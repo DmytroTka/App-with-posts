@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Список постів{% endblock %}
+
+{% block page_name %}Список постів{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for post in posts %}
+            <li><a href="{{url_for('post_detail', post_id=post.id)}}">{{ post.title }}</a> </li>
+        {% endfor %}
+    </ul>
+    {% if current_user.is_authenticated %}
+        <a href="{{ url_for('add_post') }}"><button class="green_btn">Додати пост +</button></a><br>
+
+    {% endif %}
+{% endblock %}

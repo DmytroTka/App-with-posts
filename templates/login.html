@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Логінізація{% endblock %}
+
+{% block page_name %}Логінізація{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        {{ form.username.label }}<br>
+        {{ form.username(size=20) }}<br>
+        {{ form.password.label }}<br>
+        {{ form.password(size=20) }}<br>
+        <div class="submit_btn_div">{{ form.submit() }}</div>
+    </form>
+    <br>
+    <p>Для реєстрації профілю перейдіть за посиланням: <a href="{{ url_for('register') }}">Зареєструватися</a></p>
+    <br>
+    <a href="{{ url_for('index') }}">Головна</a>
+{% endblock %}

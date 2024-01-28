@@ -1,0 +1,41 @@
+body{
+    margin: 0px;
+    padding: 1em;
+    font-family: arial, sans-serif;
+    margin-bottom: 1em;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    margin-right: 2em;
+    color: gray;
+}
+
+.green_btn{
+    background: #18de75;
+    font-size: 16px;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+    border: 2px solid #18de75;
+}
+
+input{
+    /*margin-top: 0.5em;*/
+}
+
+label{
+    display: block;
+    margin-top: 0.5em;
+}
+
+.submit_btn_div input{
+    background: #18de75;
+    font-size: 16px;
+    border-radius: 5px;
+    height: 30px;
+    cursor: pointer;
+    border: 2px solid #18de75;
+    margin-top: 1em;
+}
